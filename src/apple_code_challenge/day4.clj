@@ -21,7 +21,7 @@
     0))
 
 (defn part1
-  "Check how many passphrases are valid, watching out for duplicate words"
+  "Solves part 1 of http://adventofcode.com/2017/day/4"
   [input]
   (reduce + (map find-diff (separate-passes input))))
 
@@ -36,6 +36,6 @@
   (find-diff (map sort pass)))
 
 (defn part2
-  "Check how many passphrases are valid, watching out for duplicate words including anagrams"
+  "Solves part 2 of http://adventofcode.com/2017/day/4"
   [input]
   (reduce + (map anagrams? (separate-passes input))))

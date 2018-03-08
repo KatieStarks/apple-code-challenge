@@ -7,12 +7,12 @@
 ;;;;;;;;;;;;
 
 (defn split-digits
-  "Split digits"
+  "Split digits into individual characters"
   [number]
   (map #(Character/digit % 10) (str number)))
 
 (defn conj-first-digit
-  "Add first digit to array"
+  "Add first digit to array of digits"
   [input]
   (conj (vec input) (first input)))
 
@@ -46,7 +46,7 @@
     (flatten (conj (take half input) (drop half input)))))
 
 (defn compare-lists
-  "Compare each list together"
+  "Return the value if both are equal"
   [x y]
   (if (== x y)
     x))
