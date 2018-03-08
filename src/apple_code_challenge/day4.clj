@@ -30,7 +30,7 @@
 ;; PART 2 ;;
 ;;;;;;;;;;;;
 
-(defn anagrams?
+(defn check-anagrams
   "Check for anagrams in passphrase"
   [pass]
   (find-diff (map sort pass)))
@@ -38,4 +38,4 @@
 (defn part2
   "Solves part 2 of http://adventofcode.com/2017/day/4"
   [input]
-  (reduce + (map anagrams? (separate-passes input))))
+  (reduce + (map check-anagrams (separate-passes input))))

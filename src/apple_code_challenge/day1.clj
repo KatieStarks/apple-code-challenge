@@ -23,7 +23,7 @@
         s (second input)]
     (if (nil? s)
       0
-      (if (== f s)
+      (if (= f s)
         (+ f (compare-pair (vec (rest input))))
         (compare-pair (vec (rest input)))))))
 
@@ -48,7 +48,7 @@
 (defn compare-lists
   "Return the value if both are equal"
   [x y]
-  (if (== x y)
+  (if (= x y)
     x))
 
 (defn part2
